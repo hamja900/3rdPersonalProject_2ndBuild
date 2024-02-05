@@ -8,6 +8,9 @@ public class HUD : MonoBehaviour
     public Chad player;
 
     public Slider expSlider;
+    public GameObject sideMenuBtns;
+    public GameObject statusWindow;
+    public GameObject inventoryWindow;
 
     public Text nameText;
     public Text descriptionText;
@@ -39,6 +42,7 @@ public class HUD : MonoBehaviour
     void Update()
     {
         ExPSliderSetting();
+        CombatStatusSetting();
     }
 
     void MainUISetting()
@@ -59,6 +63,31 @@ public class HUD : MonoBehaviour
         float nextExp = chad.maxExp;
         expSlider.value = currentExp / nextExp;
 
+    }
+
+    void CombatStatusSetting()
+    {
+        atkText.text = chad.atk+Inventory.Instance.extraAtk.ToString();
+        defText.text = chad.def+Inventory.Instance.extraDef.ToString();
+        hpText.text = chad.hp+Inventory.Instance.extraHP.ToString();
+        critText.text = chad.crit+Inventory.Instance.extraCrit.ToString();
+    }
+
+    public void OnStatusBtn()
+    {
+        sideMenuBtns.SetActive(false);
+        statusWindow.SetActive(true);
+    }
+    public void OnInventoryBtn()
+    {
+        sideMenuBtns.SetActive(false);
+        inventoryWindow.SetActive(true);
+    }
+    public void OnBackBtn()
+    {
+        statusWindow.SetActive(false);
+        inventoryWindow.SetActive(false);
+        sideMenuBtns.SetActive(true);
     }
 
 
