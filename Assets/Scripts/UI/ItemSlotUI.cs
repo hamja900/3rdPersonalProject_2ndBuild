@@ -9,7 +9,6 @@ public class ItemSlotUI : MonoBehaviour
     public UnityEngine.UI.Image image;
     public GameObject equipMark;
     private ItemSlot curSlot;
-    public GameObject selectedItemPopUp;
 
     public int index;
 
@@ -17,9 +16,10 @@ public class ItemSlotUI : MonoBehaviour
 
     private void OnEnable()
     {
-      for(int i = 0; i<Inventory.Instance.slots.Length; i++)
+        
+       if(curSlot != null)
         {
-            if (Inventory.Instance.slots[i].item.isEquipped)
+            if (curSlot.item.IsEquipped == true)
             {
                 equipMark.SetActive(true);
             }
@@ -44,11 +44,7 @@ public class ItemSlotUI : MonoBehaviour
 
     public void OnBtnClick()
     {
-        if(selectedItemPopUp.activeInHierarchy)
-        {
-            return;
-        }
         Inventory.Instance.SelectedItem(index);
-        selectedItemPopUp.SetActive(true);
+        
     }
 }

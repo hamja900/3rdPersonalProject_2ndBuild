@@ -23,7 +23,7 @@ public class ItemData : ScriptableObject
     public string itemName;
     public string ItemDesc;
     public int itemPrice;
-    public bool isEquipped =false;
+    public bool IsEquipped =false;
 
     [Header("equip")]
     public ItemDataEquipable equipables;

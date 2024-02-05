@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 4340957939407636926}
   - component: {fileID: 7676181116365660478}
   - component: {fileID: -1452030262274297544}
-  - component: {fileID: 3398806240343546872}
+  - component: {fileID: 3699828758376375453}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -244,12 +244,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ab774053c58b943886e73d36412d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 3398806240343546872}
+  button: {fileID: 0}
   image: {fileID: 1868590602711391385}
   equipMark: {fileID: 5123111013036849950}
-  selectedItemPopUp: {fileID: 0}
   index: 0
---- !u!114 &3398806240343546872
+--- !u!114 &3699828758376375453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,4 +291,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7676181116365660478}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -1452030262274297544}
+        m_TargetAssemblyTypeName: ItemSlotUI, Assembly-CSharp
+        m_MethodName: OnBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

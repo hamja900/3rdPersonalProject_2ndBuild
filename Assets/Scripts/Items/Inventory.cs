@@ -18,6 +18,7 @@ public class Inventory : MonoBehaviour
 
     [Header("SelectedItem")]
     public UnityEngine.UI.Image sprite;
+    public UnityEngine.UI.Image selectedSprite;
     private ItemSlot selectedItem;
     private int selectedItemIndex;
     public GameObject selectedItemPopUp;
@@ -27,16 +28,12 @@ public class Inventory : MonoBehaviour
     public Text selectedItemName;
     public Text selectedItemStatName;
     public Text selectedItemStatValue;
+    public Text selectedItemDesc;
 
     public int extraAtk;
     public int extraDef;
     public int extraHP;
     public int extraCrit;
-
-    public int totalAtk;
-    public int totalDef;
-    public int totalHP;
-    public int totalCrit;
 
     private int curEquipIndex;
 
@@ -58,6 +55,7 @@ public class Inventory : MonoBehaviour
             uiSlots[i].Clear();
         }
         selectedItemPopUp.SetActive(false);
+        AddItem(items[0]);
 
     }
 
@@ -89,7 +87,7 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; ++i)
         {
-            if (slots[i].item != null)
+            if (slots[i].item == null)
                 return slots[i];
         }
         return null;
@@ -104,23 +102,28 @@ public class Inventory : MonoBehaviour
         selectedItem = slots[index];
         selectedItemIndex = index;
 
+        selectedItemName.text = selectedItem.item.itemName;
+        selectedSprite.sprite = selectedItem.item.sprite;
+        selectedItemDesc.text = selectedItem.item.ItemDesc;
+
         selectedItemStatName.text = selectedItem.item.equipables.type.ToString();
         selectedItemStatValue.text = selectedItem.item.equipables.value.ToString();
 
-        equipBtn.SetActive(!slots[index].item.isEquipped);
-        unEquipBtn.SetActive(slots[index].item.isEquipped);
+        equipBtn.SetActive(!slots[index].item.IsEquipped);
+        unEquipBtn.SetActive(slots[index].item.IsEquipped);
         CancleBtn.SetActive(true);
+        selectedItemPopUp.SetActive(true);
     }
 
     public void EquipItem(int index)
     {
-        selectedItem.item.isEquipped = true;
+        selectedItem.item.IsEquipped = true;
         AddExtraStats();
     }
 
     public void UnEquipItem(int index)
     {
-        selectedItem.item.isEquipped=false;
+        selectedItem.item.IsEquipped=false;
         AddExtraStats();
     }
     public void OnEquipBtn()
@@ -148,7 +151,7 @@ public class Inventory : MonoBehaviour
 
         for (int i = 0; i <slots.Length; i++)
         {
-            if (slots[i].item.isEquipped)
+            if (slots[i] != null && slots[i].item.IsEquipped==true)
             {
                 if (slots[i].item.equipables.type == equipStatTypeP.atk)
                     extraAtk += slots[i].item.equipables.value;
