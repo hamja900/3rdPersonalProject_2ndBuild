@@ -7,7 +7,7 @@ public class HUD : MonoBehaviour
 {
     public Chad player;
 
-    public Image expFrontBar;
+    public Slider expSlider;
 
     public Text nameText;
     public Text descriptionText;
@@ -21,22 +21,29 @@ public class HUD : MonoBehaviour
     public Text hpText;
     public Text critText;
 
+    private Chad chad;
+
+    private void Awake()
+    {
+        chad = player.GetComponent<Chad>();
+    }
     // Start is called before the first frame update
     void Start()
     {
         MainUISetting();
-        expFrontBar = GetComponent<Image>();
+ 
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        ExPSliderSetting();
     }
 
     void MainUISetting()
     {
-        Chad chad = player.GetComponent<Chad>();
+
         nameText.text = chad.PlayerName;
         descriptionText.text = chad.PlayerDesc;
         levelText.text = chad.level.ToString();
@@ -44,6 +51,15 @@ public class HUD : MonoBehaviour
         currentExpText.text = chad.curExp.ToString();
         maxExpText.text = chad.maxExp.ToString();
 
-        expFrontBar.fillAmount = chad.curExp / chad.maxExp;
     }
+    void ExPSliderSetting()
+    {
+
+        float currentExp = chad.curExp;
+        float nextExp = chad.maxExp;
+        expSlider.value = currentExp / nextExp;
+
+    }
+
+
 }

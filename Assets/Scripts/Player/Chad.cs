@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,5 +15,7 @@ public class Chad : PlayerData
     public int gold = 20000;
     public int curExp = 9;
     public int maxExp = 10;
+
+
 
 }
