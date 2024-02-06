@@ -76,6 +76,7 @@ public class Shop : MonoBehaviour
     {
         purchasePopUp.SetActive(false);
         errorMessagePopUp.SetActive(false);
+        AudioManager.Instance.ClickSound();
     }
 
 

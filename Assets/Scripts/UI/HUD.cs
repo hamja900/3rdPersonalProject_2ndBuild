@@ -79,17 +79,20 @@ public class HUD : MonoBehaviour
     {
         sideMenuBtns.SetActive(false);
         statusWindow.SetActive(true);
+        AudioManager.Instance.ClickSound();
     }
     public void OnInventoryBtn()
     {
         sideMenuBtns.SetActive(false);
         inventoryWindow.SetActive(true);
+        AudioManager.Instance.ClickSound();
     }
 
     public void OnShopBtn()
     {
         sideMenuBtns.SetActive(false);
         shopWindow.SetActive(true);
+        AudioManager.Instance.ClickSound();
     }
     public void OnBackBtn()
     {
@@ -97,6 +100,7 @@ public class HUD : MonoBehaviour
         inventoryWindow.SetActive(false);
         shopWindow.SetActive(false);
         sideMenuBtns.SetActive(true);
+        AudioManager.Instance.ClickSound();
     }
 
 

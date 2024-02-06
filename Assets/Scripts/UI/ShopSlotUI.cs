@@ -49,6 +49,7 @@ public class ShopSlotUI : MonoBehaviour
 
     public void OnPurchaseBtn()
     {
+        AudioManager.Instance.ClickSound();
         if (chad.gold >= curSlot.item.itemPrice)
         {
             Shop.Instance.purchasePopUp.SetActive(true);

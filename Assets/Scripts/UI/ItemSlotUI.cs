@@ -45,6 +45,7 @@ public class ItemSlotUI : MonoBehaviour
     public void OnBtnClick()
     {
         Inventory.Instance.SelectedItem(index);
-        
+        AudioManager.Instance.ClickSound();
+
     }
 }

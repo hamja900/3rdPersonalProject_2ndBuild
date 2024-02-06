@@ -131,16 +131,19 @@ public class Inventory : MonoBehaviour
     {
         EquipItem(selectedItemIndex);
         selectedItemPopUp.SetActive(false);
+        AudioManager.Instance.ClickSound();
     }
     public void OnUnEquipBtn()
     {
         UnEquipItem(selectedItemIndex);
         selectedItemPopUp.SetActive(false);
+        AudioManager.Instance.ClickSound();
     }
 
     public void OnCancleBtn()
     {
         selectedItemPopUp.SetActive(false);
+        AudioManager.Instance.ClickSound();
     }
     
     public void AddExtraStats()
