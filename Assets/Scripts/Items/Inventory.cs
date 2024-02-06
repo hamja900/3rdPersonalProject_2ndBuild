@@ -56,6 +56,8 @@ public class Inventory : MonoBehaviour
         }
         selectedItemPopUp.SetActive(false);
         AddItem(items[0]);
+        AddItem(items[1]);
+        AddItem(items[2]);
 
     }
     private void Update()
