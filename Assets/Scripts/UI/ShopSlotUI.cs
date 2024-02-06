@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ShopSlotUI : MonoBehaviour
 {
-    public UnityEngine.UI.Button button;
     public UnityEngine.UI.Image image;
     public GameObject elements;
     private ItemSlot curSlot;
@@ -23,7 +22,7 @@ public class ShopSlotUI : MonoBehaviour
 
     private void Awake()
     {
-        chad = Shop.Instance.GetComponent<Chad>();
+        chad = Inventory.Instance.GetComponent<Chad>();
     }
     public void Set(ItemSlot slot)
     {

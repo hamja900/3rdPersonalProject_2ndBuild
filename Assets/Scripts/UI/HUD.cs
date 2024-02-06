@@ -34,7 +34,7 @@ public class HUD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MainUISetting();
+        
  
 
     }
@@ -44,6 +44,7 @@ public class HUD : MonoBehaviour
     {
         ExPSliderSetting();
         CombatStatusSetting();
+        MainUISetting();
     }
 
     void MainUISetting()

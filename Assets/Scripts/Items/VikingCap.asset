@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: "\uBC14\uC774\uD0B9\uBAA8\uC790"
   ItemDesc: "\uB108\uBB34 \uBB34\uAC70\uC6CC\uC11C \uBAA9 \uAC74\uAC15\uC5D0 \uB098\uC058\uB2E4."
   itemPrice: 1500
-  isEquipped: 0
+  IsEquipped: 0
   equipables:
     type: 1
     value: 5
