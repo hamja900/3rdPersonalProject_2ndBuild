@@ -11,6 +11,7 @@ public class HUD : MonoBehaviour
     public GameObject sideMenuBtns;
     public GameObject statusWindow;
     public GameObject inventoryWindow;
+    public GameObject shopWindow;
 
     public Text nameText;
     public Text descriptionText;
@@ -82,6 +83,12 @@ public class HUD : MonoBehaviour
     {
         sideMenuBtns.SetActive(false);
         inventoryWindow.SetActive(true);
+    }
+
+    public void OnShopBtn()
+    {
+        sideMenuBtns.SetActive(false);
+        shopWindow.SetActive(true);
     }
     public void OnBackBtn()
     {
