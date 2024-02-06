@@ -12,6 +12,7 @@ public class HUD : MonoBehaviour
     public GameObject statusWindow;
     public GameObject inventoryWindow;
     public GameObject shopWindow;
+    public GameObject bankWindow;
 
     public Text nameText;
     public Text descriptionText;
@@ -24,6 +25,11 @@ public class HUD : MonoBehaviour
     public Text defText;
     public Text hpText;
     public Text critText;
+
+    [Header("Bank")]
+    public Text cash;
+    public Text banlance;
+    public Text userNameText;
 
     private Chad chad;
 
@@ -45,6 +51,7 @@ public class HUD : MonoBehaviour
         ExPSliderSetting();
         CombatStatusSetting();
         MainUISetting();
+        BankSetting();
     }
 
     void MainUISetting()
@@ -53,7 +60,7 @@ public class HUD : MonoBehaviour
         nameText.text = chad.PlayerName;
         descriptionText.text = chad.PlayerDesc;
         levelText.text = chad.level.ToString();
-        goldText.text = chad.gold.ToString();
+        goldText.text = chad.cash.ToString();
         currentExpText.text = chad.curExp.ToString();
         maxExpText.text = chad.maxExp.ToString();
 
@@ -65,6 +72,13 @@ public class HUD : MonoBehaviour
         float nextExp = chad.maxExp;
         expSlider.value = currentExp / nextExp;
 
+    }
+
+    void BankSetting()
+    {
+        cash.text = chad.cash.ToString();
+        banlance.text = chad.banlance.ToString();
+        userNameText.text = chad.PlayerName;
     }
 
     void CombatStatusSetting()
@@ -94,12 +108,19 @@ public class HUD : MonoBehaviour
         shopWindow.SetActive(true);
         AudioManager.Instance.ClickSound();
     }
+    public void OnBankBtn()
+    {
+        sideMenuBtns.SetActive(false);
+        bankWindow.SetActive(true);
+        AudioManager.Instance.ClickSound();
+    }
     public void OnBackBtn()
     {
         statusWindow.SetActive(false);
         inventoryWindow.SetActive(false);
         shopWindow.SetActive(false);
         sideMenuBtns.SetActive(true);
+        bankWindow.SetActive(false);
         AudioManager.Instance.ClickSound();
     }
 

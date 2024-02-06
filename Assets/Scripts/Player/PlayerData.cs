@@ -11,7 +11,7 @@ public class PlayerData : MonoBehaviour
     public static int Def;
     public static int HP;
     public static int Crit;
-    public static int Gold;
+    public static int Cash;
     public static int CurExp;
     public static int MaxExp;
 }

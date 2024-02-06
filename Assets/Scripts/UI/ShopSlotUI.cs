@@ -50,10 +50,10 @@ public class ShopSlotUI : MonoBehaviour
     public void OnPurchaseBtn()
     {
         AudioManager.Instance.ClickSound();
-        if (chad.gold >= curSlot.item.itemPrice)
+        if (chad.cash >= curSlot.item.itemPrice)
         {
             Shop.Instance.purchasePopUp.SetActive(true);
-            chad.gold -= curSlot.item.itemPrice;
+            chad.cash -= curSlot.item.itemPrice;
             Inventory.Instance.AddItem(Shop.Instance.shopItems[index]);
         }
         else

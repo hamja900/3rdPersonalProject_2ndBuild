@@ -12,7 +12,8 @@ public class Chad : PlayerData
     public int def = 5;
     public int hp = 100;
     public int crit = 25;
-    public int gold = 20000;
+    public int cash = 100000;
+    public int banlance = 50000;
     public int curExp = 9;
     public int maxExp = 10;
 
