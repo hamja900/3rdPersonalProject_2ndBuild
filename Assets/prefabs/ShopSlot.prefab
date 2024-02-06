@@ -219,6 +219,8 @@ MonoBehaviour:
   button: {fileID: 2414162150046974839}
   image: {fileID: 6012870392197312251}
   elements: {fileID: 6554278490970536668}
+  purchasePopUp: {fileID: 5558619087522065558, guid: bd3438ca0950a744b9953933f2aae3fc, type: 3}
+  errorMessagePopUp: {fileID: 8297798212911211583, guid: 1f922a8d83ec34d419bb07d1ece68fc1, type: 3}
   index: 0
   displayedImage: {fileID: 6012870392197312251}
   displayedItemName: {fileID: 1814636702061998067}
@@ -532,7 +534,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3459626632724925000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6087768459136914800}
+        m_TargetAssemblyTypeName: ShopSlotUI, Assembly-CSharp
+        m_MethodName: OnPerchaseBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5762485596701728247
 GameObject:
   m_ObjectHideFlags: 0

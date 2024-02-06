@@ -10,16 +10,17 @@ public class Shop : MonoBehaviour
     public ItemSlot[] shopSlot;
     public ItemData[] shopItems;
 
-
-    
     public GameObject purchasePopUp;
     public GameObject errorMessagePopUp;
+    public GameObject player;
+    private Chad chad;
 
 
     public static Shop Instance;
     private void Awake()
     {
         Instance = this;
+        chad = player.GetComponent<Chad>();
     }
     void Start()
     {
@@ -69,5 +70,11 @@ public class Shop : MonoBehaviour
                 return shopSlot[i];
         }
         return null;
+    }
+
+    public void OnConfirmBtn()
+    {
+        purchasePopUp.SetActive(false);
+        errorMessagePopUp.SetActive(false);
     }
 }
