@@ -67,10 +67,10 @@ public class HUD : MonoBehaviour
 
     void CombatStatusSetting()
     {
-        atkText.text = chad.atk+Inventory.Instance.extraAtk.ToString();
-        defText.text = chad.def+Inventory.Instance.extraDef.ToString();
-        hpText.text = chad.hp+Inventory.Instance.extraHP.ToString();
-        critText.text = chad.crit+Inventory.Instance.extraCrit.ToString();
+        atkText.text = (chad.atk+Inventory.Instance.extraAtk).ToString();
+        defText.text = (chad.def+Inventory.Instance.extraDef).ToString();
+        hpText.text = (chad.hp + Inventory.Instance.extraHP).ToString();
+        critText.text = (chad.crit + Inventory.Instance.extraCrit).ToString();
     }
 
     public void OnStatusBtn()

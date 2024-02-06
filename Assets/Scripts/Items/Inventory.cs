@@ -58,6 +58,10 @@ public class Inventory : MonoBehaviour
         AddItem(items[0]);
 
     }
+    private void Update()
+    {
+        AddExtraStats();
+    }
 
     public void AddItem(ItemData item)
     {
@@ -118,13 +122,11 @@ public class Inventory : MonoBehaviour
     public void EquipItem(int index)
     {
         selectedItem.item.IsEquipped = true;
-        AddExtraStats();
     }
 
     public void UnEquipItem(int index)
     {
         selectedItem.item.IsEquipped=false;
-        AddExtraStats();
     }
     public void OnEquipBtn()
     {
@@ -151,7 +153,9 @@ public class Inventory : MonoBehaviour
 
         for (int i = 0; i <slots.Length; i++)
         {
-            if (slots[i] != null && slots[i].item.IsEquipped==true)
+            if (slots[i] == null)
+                return;
+            if (slots[i].item != null && slots[i].item.IsEquipped==true)
             {
                 if (slots[i].item.equipables.type == equipStatTypeP.atk)
                     extraAtk += slots[i].item.equipables.value;
@@ -161,8 +165,8 @@ public class Inventory : MonoBehaviour
                     extraHP += slots[i].item.equipables.value;
                 else if (slots[i].item.equipables.type == equipStatTypeP.crit)
                     extraCrit += slots[i].item.equipables.value;
-               
             }
+           
         }
     }
 

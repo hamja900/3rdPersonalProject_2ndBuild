@@ -14,7 +14,7 @@ public class ItemSlotUI : MonoBehaviour
 
     
 
-    private void OnEnable()
+    private void Update()
     {
         
        if(curSlot != null)
