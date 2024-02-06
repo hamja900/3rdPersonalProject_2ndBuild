@@ -8,8 +8,6 @@ public class ShopSlotUI : MonoBehaviour
     public UnityEngine.UI.Button button;
     public UnityEngine.UI.Image image;
     public GameObject elements;
-    public GameObject purchasePopUp;
-    public GameObject errorMessagePopUp;
     private ItemSlot curSlot;
     Chad chad;
 
@@ -50,17 +48,17 @@ public class ShopSlotUI : MonoBehaviour
         displayedItemPrice.text = curSlot.item.itemPrice.ToString();
     }
 
-    public void OnPerchaseBtn()
+    public void OnPurchaseBtn()
     {
         if (chad.gold >= curSlot.item.itemPrice)
         {
-            purchasePopUp.SetActive(true);
+            Shop.Instance.purchasePopUp.SetActive(true);
             chad.gold -= curSlot.item.itemPrice;
             Inventory.Instance.AddItem(Shop.Instance.shopItems[index]);
         }
         else
         {
-            errorMessagePopUp.SetActive(true);
+            Shop.Instance.errorMessagePopUp.SetActive(true);
         }
     }
 }

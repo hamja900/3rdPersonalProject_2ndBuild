@@ -94,6 +94,7 @@ public class HUD : MonoBehaviour
     {
         statusWindow.SetActive(false);
         inventoryWindow.SetActive(false);
+        shopWindow.SetActive(false);
         sideMenuBtns.SetActive(true);
     }
 
