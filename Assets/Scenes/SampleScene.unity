@@ -7559,6 +7559,9 @@ MonoBehaviour:
   defText: {fileID: 1643902821}
   hpText: {fileID: 426001459}
   critText: {fileID: 637855933}
+  cash: {fileID: 1149540188}
+  banlance: {fileID: 1252225648}
+  userNameText: {fileID: 712835625}
 --- !u!114 &1316138854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9136,6 +9139,7 @@ GameObject:
   - component: {fileID: 1584011132}
   - component: {fileID: 1584011134}
   - component: {fileID: 1584011133}
+  - component: {fileID: 1584011135}
   m_Layer: 5
   m_Name: BankWindow
   m_TagString: Untagged
@@ -9210,6 +9214,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584011131}
   m_CullTransparentMesh: 1
+--- !u!114 &1584011135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584011131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa8f5d4040702d489594ebfe83147aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bankMainBtns: {fileID: 246153690}
+  depositWindow: {fileID: 594506463}
+  depositBtn: {fileID: 375046959}
+  withdrawBtn: {fileID: 827286960}
+  inputfield: {fileID: 1157926658}
 --- !u!1 &1589602708
 GameObject:
   m_ObjectHideFlags: 0
@@ -10032,7 +10053,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1765527188}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1584011131}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1765527188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10568,7 +10601,8 @@ MonoBehaviour:
   def: 5
   hp: 100
   crit: 25
-  gold: 20000
+  cash: 100000
+  banlance: 50000
   curExp: 9
   maxExp: 10
 --- !u!114 &1848595209
