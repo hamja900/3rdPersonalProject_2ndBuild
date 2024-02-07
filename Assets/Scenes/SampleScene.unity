@@ -1461,12 +1461,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: f69177139074c124489fc763c16281d0, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 50
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 0
@@ -1565,7 +1565,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 375046962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1584011135}
+        m_TargetAssemblyTypeName: Bank, Assembly-CSharp
+        m_MethodName: OnDepositBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &375046962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4393,7 +4405,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 764339311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1584011135}
+        m_TargetAssemblyTypeName: Bank, Assembly-CSharp
+        m_MethodName: OnFiftyK
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &764339311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6722,13 +6746,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1157926659}
   m_TextComponent: {fileID: 325833334}
   m_Placeholder: {fileID: 605276624}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
@@ -9146,7 +9170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1584011132
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9231,6 +9255,7 @@ MonoBehaviour:
   depositBtn: {fileID: 375046959}
   withdrawBtn: {fileID: 827286960}
   inputfield: {fileID: 1157926658}
+  noMoney: {fileID: 0}
 --- !u!1 &1589602708
 GameObject:
   m_ObjectHideFlags: 0
@@ -10054,13 +10079,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1584011131}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1584011135}
+        m_TargetAssemblyTypeName: Bank, Assembly-CSharp
+        m_MethodName: OnBankBackBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11083,7 +11108,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1928073523}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1584011135}
+        m_TargetAssemblyTypeName: Bank, Assembly-CSharp
+        m_MethodName: OnTirtyK
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1928073523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11502,7 +11539,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2008743931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1584011135}
+        m_TargetAssemblyTypeName: Bank, Assembly-CSharp
+        m_MethodName: OnTenK
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2008743931
 MonoBehaviour:
   m_ObjectHideFlags: 0
